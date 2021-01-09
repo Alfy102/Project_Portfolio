@@ -12,4 +12,4 @@ def ocr_core(filename):
     text = pytesseract.image_to_string(Image.open(filename))  # We'll use Pillow's Image class to open the image and pytesseract to detect the string in the image
     return text
 
-print(ocr_core('Python_Tesseract_Project/sample/sample1.png')) #trying to OCR the sample1.png file in sample folder
+
