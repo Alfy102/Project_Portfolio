@@ -14,7 +14,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024 #max file size of 1MB
 app.config['UPLOAD_EXTENSIONS'] = ['png', 'jpg', 'jpeg'] #allowed extension
 
-webbrowser.open('http://127.0.0.1:5001/', new=2)
+webbrowser.open('http://127.0.0.1:5000/', new=2)
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['UPLOAD_EXTENSIONS'] # check uploaded file extension
