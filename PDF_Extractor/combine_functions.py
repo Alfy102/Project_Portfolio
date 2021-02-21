@@ -9,7 +9,7 @@ import csv
 from progress.bar import IncrementalBar
 import tempfile
 import PyPDF2
-source_path = str(r"/mnt/c/Users/salmo02/OneDrive - Boustead Heavy Industries Corporation Berhad/LCS1 Drawings/")
+source_path = str(r"") #PATH TO SOURCE PDF FILES
 
 #----------use temporary directory-------------------
 #o_path = tempfile.TemporaryDirectory(dir = "/mnt/d/")
@@ -32,7 +32,7 @@ input_data_frame['Drawing_Number'] = input_data_frame['Input_Files'].str[:-6]
 
 new_drawings = input_data_frame[((input_data_frame['Drawing_Number'].isin(keywords_data_frame['Drawing_Number']))==False) & ((input_data_frame['Input_Files'].str.contains(" "))==False) & ((input_data_frame['Input_Files'].str.endswith("pdf")==True) | (input_data_frame['Input_Files'].str.endswith("PDF")==True))]
 print("Done.")
-"""#---------------------decrypt PDF files-----------------------
+""#---------------------decrypt PDF files-----------------------
 
 inputfiles = list(new_drawings['Input_Files'])
 bar = IncrementalBar('Decrypting', max=len(inputfiles))
@@ -60,7 +60,7 @@ for k in range(len(outputfiles)):
     bar.next()
 bar.finish()
 print("\n")
-#-----------------------------------------------------------"""
+#-----------------------------------------------------------
 #--------------Convert remaining files into text------------
 onlyfiles = listdir(output_path_pdf)
 bar = IncrementalBar('Converting to text', max=len(onlyfiles))
