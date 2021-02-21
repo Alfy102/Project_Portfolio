@@ -1,4 +1,4 @@
-from functools import wraps
+from functools import wraps #import wraps from functool to overcome stacking decorators issue
 
 
 def my_logger(orig__function):
