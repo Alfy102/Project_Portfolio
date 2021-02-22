@@ -40,7 +40,7 @@ new_emp_3 = Employee.from_string(emp_str_3) # returns the first, last, and pay. 
 #---------------------------------------------------------------------------------------
 Employee.set_raise_amount(1.05)
 
-print(new_emp_1.email)
+print(new_emp_1.fullname)
 print(new_emp_2.email)
 print(new_emp_3.email)
 
